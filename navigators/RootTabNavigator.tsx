@@ -16,6 +16,7 @@ export default function RootTabNavigator() {
         name="Home"
         component={HomeScreen}
         options={{
+          headerShown: false,
           tabBarLabel: "首頁",
           tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />,
           tabBarActiveTintColor: "#0891b2",
@@ -25,6 +26,7 @@ export default function RootTabNavigator() {
         name="LearningCenter"
         component={LearningCenterScreen}
         options={{
+          headerShown: false,
           tabBarLabel: "學習中心",
           tabBarIcon: ({ color }) => <AntDesign name="book" size={24} color={color} />,
           tabBarActiveTintColor: "#0891b2",
@@ -34,6 +36,7 @@ export default function RootTabNavigator() {
         name="PersonalCenter"
         component={PersonalCenterScreen}
         options={{
+          headerShown: false,
           tabBarLabel: "個人中心",
           tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
           tabBarActiveTintColor: "#0891b2",
