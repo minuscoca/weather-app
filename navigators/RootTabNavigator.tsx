@@ -3,9 +3,10 @@ import HomeScreen from '@/screens/home'
 import LearningCenterScreen from '@/screens/learning-center'
 import PersonalCenterScreen from '@/screens/personal-center'
 import { RootTabParamList } from './types'
-
 import { AntDesign } from '@expo/vector-icons';
-
+import ScreenHeaderBackground from '@/components/ScreenHeaderBackground'
+import ScreenHeaderRight from '@/components/ScreenHeaderRight'
+import NotificationButton from '@/components/NotificationButton'
 
 const Tab = createBottomTabNavigator<RootTabParamList>()
 
@@ -26,20 +27,33 @@ export default function RootTabNavigator() {
         name="LearningCenter"
         component={LearningCenterScreen}
         options={{
-          headerShown: false,
           tabBarLabel: "學習中心",
           tabBarIcon: ({ color }) => <AntDesign name="book" size={24} color={color} />,
           tabBarActiveTintColor: "#0891b2",
+
+          // header title
+          headerTitle: "學習中心",
+          headerBackground: ScreenHeaderBackground,
+
+          // header right
+          headerRight: () => (
+            <ScreenHeaderRight>
+              <NotificationButton />
+            </ScreenHeaderRight>
+          )
         }}
       />
       <Tab.Screen
         name="PersonalCenter"
         component={PersonalCenterScreen}
         options={{
-          headerShown: false,
           tabBarLabel: "個人中心",
           tabBarIcon: ({ color }) => <AntDesign name="user" size={24} color={color} />,
           tabBarActiveTintColor: "#0891b2",
+
+          // header title
+          headerTitle: "個人中心",
+          headerBackground: ScreenHeaderBackground,
         }}
       />
     </Tab.Navigator>

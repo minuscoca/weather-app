@@ -8,7 +8,6 @@ export default function PersonalCenterScreen({ navigation }: PersonalCenterScree
   return (
     <SafeAreaView>
       <StatusBar style='auto' />
-      <ScreenHeader title="個人中心" />
     </SafeAreaView>
   )
 }

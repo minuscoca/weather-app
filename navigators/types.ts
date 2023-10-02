@@ -3,6 +3,7 @@ import type { BottomTabScreenProps } from '@react-navigation/bottom-tabs';
 
 export type RootStackParamList = {
   Login: undefined;
+  Notifications: undefined;
   RootTabNavigator: undefined;
 };
 
@@ -15,6 +16,10 @@ export type RootTabParamList = {
 export type LoginScreenProps = NativeStackScreenProps<
   RootStackParamList,
   'Login'
+>;
+export type NotificationsScreenProps = NativeStackScreenProps<
+  RootStackParamList,
+  'Notifications'
 >;
 export type HomeScreenProps = BottomTabScreenProps<RootTabParamList, 'Home'>;
 export type LearningCenterScreenProps = BottomTabScreenProps<
